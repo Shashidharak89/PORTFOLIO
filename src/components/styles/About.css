@@ -1,0 +1,359 @@
+/* About.css */
+.about-container {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #928DAB 0%, #1F1C2C 100%);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .header-underline {
+    height: 4px;
+    width: 80px;
+    background: #fff;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 2px;
+  }
+  
+  .header-underline::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    left: -60px;
+    border-radius: 2px;
+    animation: slide 3s infinite;
+  }
+  
+  @keyframes slide {
+    0%, 100% { left: -60px; }
+    50% { left: 100px; }
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-left {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-right {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  /* Photo container with animated border */
+  .photo-container {
+    width: 280px;
+    height: 280px;
+    position: relative;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .photo-container.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .photo-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+  
+  .photo-frame::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #928DAB, #1F1C2C, #928DAB, #1F1C2C);
+    z-index: -1;
+    border-radius: 22px;
+    background-size: 400%;
+    animation: borderAnimation 10s linear infinite;
+  }
+  
+  @keyframes borderAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
+  /* Quick info section */
+  .quick-info {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info-item {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+  }
+  
+  .info-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .info-value {
+    font-weight: 500;
+  }
+  
+  /* Bio section with animation */
+  .about-bio {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .about-bio.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .about-bio h2, .experience-timeline h2, .interests-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .about-bio h2::after, .experience-timeline h2::after, .interests-section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    bottom: -5px;
+    left: 0;
+  }
+  
+  .about-bio p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  
+  /* Timeline section with animation */
+  .experience-timeline {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+  }
+  
+  .experience-timeline.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #928DAB;
+    border: 3px solid #1F1C2C;
+  }
+  
+  .timeline-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-content:hover {
+    transform: translateY(-5px);
+  }
+  
+  .timeline-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .timeline-place {
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+  }
+  
+  .timeline-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  /* Interests section with animation */
+  .interests-section {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+  }
+  
+  .interests-section.animate-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .interest-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .interest-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .interest-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+  }
+  
+  .interest-item:hover .interest-icon {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  
+  .interest-icon.coding {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 00-2 2v4a2 2 0 01-2 2H3m6-10a2 2 0 012-2h2a2 2 0 012 2v12a2 2 0 01-2 2h-2a2 2 0 01-2-2V3zm6 4a2 2 0 012-2h2a2 2 0 012 2v6a2 2 0 01-2 2h-1"/></svg>');
+  }
+  
+  .interest-icon.design {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm-5 8c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5z"/></svg>');
+  }
+  
+  .interest-icon.travel {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.4l-1.85 3.75-4.15.6 3 2.9-.7 4.1L12 13.9l3.7 1.85-.7-4.1 3-2.9-4.15-.6L12 4.4zm0 2.1l1.2 2.45 2.75.4-2 1.95.45 2.75L12 13.1l-2.4 1.25.45-2.75-2-1.95 2.75-.4L12 6.5z"/></svg>');
+  }
+  
+  .interest-icon.photography {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3h6l2 2h4a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1h4l2-2zm3 16a5 5 0 100-10 5 5 0 000 10zm0-2a3 3 0 110-6 3 3 0 010 6z"/></svg>');
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-left {
+      margin-bottom: 2rem;
+    }
+    
+    .photo-container {
+      width: 240px;
+      height: 240px;
+    }
+    
+    .about-header h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* Additional animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Initial load animation for the container */
+  .about-container {
+    animation: fadeIn 1s ease;
+  }
