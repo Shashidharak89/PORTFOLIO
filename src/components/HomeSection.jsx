@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './styles/HomeSection.css';
+import Profile from './images/profile.jpg';
 
 const HomeSection = () => {
   const titleRef = useRef(null);
@@ -83,7 +84,7 @@ const HomeSection = () => {
       <div className="home_unique_container">
         <div className="home_unique_content">
           <h1 ref={titleRef} className="home_unique_title">
-            <span className="home_unique_title-name">Hi, I'm <span className="home_unique_highlight">Your Name</span></span>
+            <span className="home_unique_title-name">Hi, I'm <span className="home_unique_highlight">Shashidhara K</span></span>
             <span className="home_unique_title-role">Creative Developer</span>
           </h1>
           
