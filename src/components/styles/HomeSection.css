@@ -21,7 +21,8 @@
   background-color: var(--home_unique_secondary);
   color: var(--home_unique_text-light);
   overflow: hidden;
-  padding: 2rem;
+  /* padding: 2rem; */
+ 
 }
 
 .home_unique_container {
