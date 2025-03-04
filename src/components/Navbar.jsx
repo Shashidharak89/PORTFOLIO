@@ -96,14 +96,14 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="navbar-cta">
+        {/* <div className="navbar-cta">
           <button className="cta-button">
             <span>Hire Me</span>
             <svg className="cta-arrow" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 7.5H14M14 7.5L7.5 1M14 7.5L7.5 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );
