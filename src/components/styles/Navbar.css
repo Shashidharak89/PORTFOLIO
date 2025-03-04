@@ -249,6 +249,9 @@
   
   /* Responsive Design */
   @media (max-width: 992px) {
+    .navbar{
+      width: 100%;
+    }
     .nav-elements {
       position: fixed;
       top: 0;

@@ -9,6 +9,7 @@ import HomeSection from "./components/HomeSection";
 import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
 
+
 function App() {
   return (
     <Router>
