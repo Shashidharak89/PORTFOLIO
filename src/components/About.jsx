@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './styles/About.css';
+import profile from './images/profile.jpg';
 
 const About = () => {
   const bioRef = useRef(null);
@@ -40,22 +41,22 @@ const About = () => {
         <div className="about-left">
           <div className="photo-container" ref={photoBorderRef}>
             <div className="photo-frame">
-              <img src="/api/placeholder/400/400" alt="Portrait" className="portrait" />
+              <img src={profile} alt="Portrait" className="portrait" />
             </div>
           </div>
 
           <div className="quick-info">
             <div className="info-item">
               <span className="info-label">Name</span>
-              <span className="info-value">John Doe</span>
+              <span className="info-value">Shashidhara K</span>
             </div>
             <div className="info-item">
               <span className="info-label">Based in</span>
-              <span className="info-value">New York, USA</span>
+              <span className="info-value">Mangalore, India</span>
             </div>
             <div className="info-item">
               <span className="info-label">Specialty</span>
-              <span className="info-value">Frontend Development</span>
+              <span className="info-value">Full-Stack Development</span>
             </div>
           </div>
         </div>
