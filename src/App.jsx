@@ -8,7 +8,8 @@ import About from "./components/About";
 import HomeSection from "./components/HomeSection";
 import SkillsPage from "./components/SkillsPage";
 import ContactPage from "./components/ContactPage";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
+import PFooter from "./components/PFooter";
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
         <Route path="/skills" element={<SkillsPage/>} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
-      <Footer/>
+      <PFooter/>
+      {/* <Footer/> */}
     </Router>
   );
 }
